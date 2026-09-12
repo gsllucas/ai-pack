@@ -2,7 +2,7 @@
   "_template": {
     "remove_this_key_when_generating": true,
     "purpose": "Estado da descoberta em formato legível por máquina. Única fonte de verdade da geração e da regeneração de .ai/.",
-    "placeholders": "Valores no formato {{Q-XX}} devem ser substituídos pela resposta da pergunta de mesmo ID em .ai-template/ask/questions.md. Campo sem resposta recebe null e entra em open_questions.",
+    "placeholders": "Valores no formato {{Q-XX}} devem ser substituídos pela resposta da pergunta de mesmo ID em ai-template/ask/questions.md. Campo sem resposta recebe null e entra em open_questions.",
     "answer_origin": ["interview", "inferred", "default", "unknown"],
     "rules": [
       "Nunca preencher um campo com valor plausível não confirmado.",
@@ -13,7 +13,7 @@
   "schema_version": 1,
   "framework": {
     "template_version": "1.4.0",
-    "source": ".ai-template",
+    "source": "ai-template",
     "generated_at": "{{ISO-8601}}",
     "regenerated_at": null
   },

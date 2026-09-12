@@ -1,4 +1,4 @@
-# `.ai-template` — Framework de geração de orientações para agentes de IA
+# `ai-template` — Framework de geração de orientações para agentes de IA
 
 Este diretório é a **fonte** do framework. Ele não é lido durante o desenvolvimento
 do dia a dia: ele é lido **uma vez**, por um agente de IA, que conduz uma descoberta
@@ -6,10 +6,10 @@ guiada por perguntas com o usuário e, a partir das respostas, gera o diretório
 **específico do projeto**.
 
 ```
-.ai-template/   (genérico, versionado no framework)   →   .ai/   (específico do projeto)
+ai-template/   (genérico, versionado no framework)   →   .ai/   (específico do projeto)
 ```
 
-- `.ai-template/` **nunca** contém informação de um projeto real.
+- `ai-template/` **nunca** contém informação de um projeto real.
 - `.ai/` **nunca** contém instrução para o agente gerador, placeholder ou pergunta.
 - O framework gera **regras, diretrizes e padrões de arquitetura**, nunca specs de
   funcionalidade: specs (PRD, tech-spec, requisito de feature) são tratadas em um fluxo
@@ -107,7 +107,7 @@ removida tem seu ID aposentado, não reaproveitado.
 
 <critical>O AGENTE GERADOR DEVE EXECUTAR ESTAS ETAPAS NA ORDEM, SEM PULAR ETAPAS.</critical>
 
-1. **Ler todo o `.ai-template/`** antes de qualquer pergunta, incluindo este README.
+1. **Ler todo o `ai-template/`** antes de qualquer pergunta, incluindo este README.
 2. **Inspecionar o repositório** para inferir o que já é observável (linguagens,
    gerenciador de pacotes, frameworks, scripts de build/test/lint, CI, estrutura atual).
    O resultado da inspeção vira _resposta pré-preenchida_, apresentada ao usuário para
@@ -196,4 +196,4 @@ gerações não as reabram.
 | 5   | `memory/memory.json` era citado em `ask/questions.md` mas não existia            | Criado como template com esquema explícito.                                                                                                                                                         |
 | 6   | Onde ficam convenções de nomenclatura de código?                                  | Nomenclatura de **código** fica no arquivo da stack (é específica da linguagem); nomenclatura de **arquivos e diretórios** fica em `folder-structure.md`.                                           |
 | 7   | `templates/` (ADR, plano de mudança, pedido de decisão, relatório de verificação) | Removido: os artefatos eram desnecessários para o framework. Plano, pedido de decisão e evidência de verificação passam a ser apresentados diretamente na sessão (`@./rules/RULES.md`, seções 2, 3 e 12). |
-| 8   | Layout do `.ai-template/` misturava arquivos soltos na raiz (`RULES.md`, `memory.json`, `questions.md`) com pastas (`gates/`, `guardrails/`, `skeletons/`) | Padronizado: cada saída nomeada ganhou pasta própria (`rules/`, `memory/`, `ask/`); só `README.md` fica solto na raiz. `.ai/` espelha o mesmo padrão, exceto `ask/`, que nunca é copiado. |
+| 8   | Layout do `ai-template/` misturava arquivos soltos na raiz (`RULES.md`, `memory.json`, `questions.md`) com pastas (`gates/`, `guardrails/`, `skeletons/`) | Padronizado: cada saída nomeada ganhou pasta própria (`rules/`, `memory/`, `ask/`); só `README.md` fica solto na raiz. `.ai/` espelha o mesmo padrão, exceto `ask/`, que nunca é copiado. |
