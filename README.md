@@ -1,1 +1,0 @@
-# Princípios compartilhados em múltiplos projetos que utilizam speckit

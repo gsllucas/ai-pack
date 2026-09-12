@@ -1,0 +1,162 @@
+{
+  "_template": {
+    "remove_this_key_when_generating": true,
+    "purpose": "Estado da descoberta em formato legível por máquina. Única fonte de verdade da geração e da regeneração de .ai/.",
+    "placeholders": "Valores no formato {{Q-XX}} devem ser substituídos pela resposta da pergunta de mesmo ID em .ai-template/ask/questions.md. Campo sem resposta recebe null e entra em open_questions.",
+    "answer_origin": ["interview", "inferred", "default", "unknown"],
+    "rules": [
+      "Nunca preencher um campo com valor plausível não confirmado.",
+      "Arrays vazios significam 'nenhum'; null significa 'não respondido'.",
+      "Ao regenerar, campos editados manualmente pelo usuário têm precedência sobre inferência."
+    ]
+  },
+  "schema_version": 1,
+  "framework": {
+    "template_version": "1.4.0",
+    "source": ".ai-template",
+    "generated_at": "{{ISO-8601}}",
+    "regenerated_at": null
+  },
+  "languages": {
+    "docs": "{{Q-A1}}",
+    "chat": "{{Q-A2}}",
+    "code": "{{Q-A3}}",
+    "vcs": "{{Q-A4}}"
+  },
+  "project": {
+    "name": "{{Q-A5.name}}",
+    "description": "{{Q-A5.description}}",
+    "domain": "{{Q-A6.domain}}",
+    "users": "{{Q-A6.users}}",
+    "maturity": "{{Q-A7}}",
+    "surfaces": "{{Q-A8}}"
+  },
+  "session": {
+    "progress_tracking": "{{Q-B1}}",
+    "plan_before_code": "{{Q-B2}}"
+  },
+  "vcs": {
+    "commit_policy": "{{Q-B3}}",
+    "remote_policy": "{{Q-B4}}",
+    "protected_branches": "{{Q-B5}}",
+    "feature_branch_required": "{{Q-B6}}",
+    "commit_convention": "{{Q-B7}}",
+    "branch_convention": "{{Q-B8}}",
+    "allow_agent_signature": "{{Q-B9}}"
+  },
+  "safety": {
+    "destructive_ops": "{{Q-B10}}",
+    "automode_exception": "{{Q-B11}}"
+  },
+  "decision_policy": {
+    "requires_approval": "{{Q-B12}}"
+  },
+  "quality": {
+    "principles": "{{Q-B15}}",
+    "comments_policy": "{{Q-B16}}",
+    "limits": "{{Q-B17}}"
+  },
+  "dependencies": {
+    "policy": "{{Q-B18}}",
+    "constraints": "{{Q-B19}}"
+  },
+  "security": {
+    "secrets_management": "{{Q-B20}}",
+    "sensitive_data": "{{Q-B21}}",
+    "log_restrictions": "{{Q-B22}}"
+  },
+  "verification": {
+    "required": "{{Q-B23}}",
+    "on_failure": "{{Q-B24}}"
+  },
+  "architecture": {
+    "complexity": "{{Q-C1}}",
+    "components": "{{Q-C2}}",
+    "dependency_direction": "{{Q-C3}}",
+    "nfrs": "{{Q-C4}}",
+    "integrations": "{{Q-C5}}"
+  },
+  "folders": {
+    "strategy": "{{Q-C7}}",
+    "organization": "{{Q-C8}}",
+    "naming": "{{Q-C9}}",
+    "tests_location": "{{Q-C10}}"
+  },
+  "stacks": [
+    {
+      "id": "{{Q-C6.id}}",
+      "doc": ".ai/skeletons/{{Q-C6.id}}.md",
+      "role": "{{Q-C6.role}}",
+      "language": "{{Q-C6.language}}",
+      "runtime_version": "{{Q-C6.runtime_version}}",
+      "package_manager": "{{Q-C6.package_manager}}",
+      "frameworks": "{{Q-C6.frameworks}}",
+      "test_tooling": "{{Q-C6.test_tooling}}",
+      "commands": {
+        "install": "{{Q-C6.install}}",
+        "run": "{{Q-C6.run}}",
+        "build": "{{Q-E1}}",
+        "lint": "{{Q-E2}}",
+        "test": "{{Q-E3}}"
+      },
+      "naming": "{{Q-C11}}",
+      "tooling": "{{Q-C12}}",
+      "typing": "{{Q-C13}}"
+    }
+  ],
+  "guardrails": {
+    "general": {
+      "scope": "{{Q-D1}}",
+      "frozen": "{{Q-D2}}",
+      "uncertainty": "{{Q-D3}}"
+    },
+    "api": {
+      "enabled": "{{derivado de project.surfaces}}",
+      "style": "{{Q-D4}}",
+      "breaking_change": "{{Q-D5}}",
+      "required": "{{Q-D6}}"
+    },
+    "frontend": {
+      "enabled": "{{derivado de project.surfaces}}",
+      "patterns": "{{Q-D7}}",
+      "required": "{{Q-D8}}"
+    },
+    "mobile": {
+      "enabled": "{{derivado de project.surfaces}}",
+      "targets": "{{Q-D9}}",
+      "required": "{{Q-D10}}"
+    },
+    "ux": {
+      "enabled": "{{derivado de project.surfaces}}",
+      "design_system": "{{Q-D11}}",
+      "required": "{{Q-D12}}"
+    }
+  },
+  "gates": {
+    "build": "{{Q-E1}}",
+    "lint": "{{Q-E2}}",
+    "tests": {
+      "command": "{{Q-E3}}",
+      "policy": "{{Q-E4}}",
+      "tdd": "{{Q-E5}}",
+      "coverage": "{{Q-E6}}",
+      "mutation_policy": "{{Q-E7}}"
+    },
+    "order": "{{Q-E8}}",
+    "evidence": "{{Q-E9}}",
+    "preexisting_failures": "{{Q-E10}}"
+  },
+  "discovery": {
+    "completed_blocks": [],
+    "answers_origin": {
+      "Q-A1": "interview"
+    }
+  },
+  "open_questions": [
+    {
+      "id": "Q-XX",
+      "question": "[pergunta ainda sem resposta]",
+      "blocked_output": "[arquivo e seção que ficaram com TODO(descoberta)]"
+    }
+  ]
+}
