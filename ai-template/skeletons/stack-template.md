@@ -66,7 +66,7 @@ em `@./architecture.md`; comandos de validação e critérios de aprovação fic
 - Linter: [ferramenta, arquivo de configuração, regras que bloqueiam]
 - Verificador de tipos: [ferramenta, modo estrito?]
 - **MUST NOT** desabilitar regra de lint com comentário inline sem justificativa escrita
-  na mesma linha e aprovação — ver `@../rules/RULES.md` (`RULE-VER-05`).
+  na mesma linha e aprovação — ver `@../RULES.md` (`RULE-VER-05`).
 - **MUST NOT** alterar a configuração das ferramentas para acomodar código novo.
 
 ---
@@ -130,7 +130,7 @@ declarações. Serve para que o código novo seja indistinguível do existente.]
 - Variáveis obrigatórias: [nome e finalidade — **nunca** o valor]
 - Validação de configuração no boot: [como é feita]
 - **MUST NOT** ler variável de ambiente fora da camada de configuração.
-- Segredos seguem `@../rules/RULES.md`, seção 8.
+- Segredos seguem `@../RULES.md`, seção 8.
 
 ---
 

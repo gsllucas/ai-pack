@@ -5,7 +5,7 @@ e de **critério objetivo de aprovação**. Gate sem comando é intenção, não
 projeto ainda não tem o comando, registrar `TODO(descoberta)` em vez de inventar.]
 
 [Este arquivo responde **como provar que a mudança está pronta**. As regras de quando
-validar estão em `@../rules/RULES.md`, seção 12; o que o código não pode violar está em
+validar estão em `@../RULES.md`, seção 12; o que o código não pode violar está em
 `@../guardrails/`.]
 
 ---
@@ -101,7 +101,7 @@ Parar na primeira falha bloqueante, corrigir e reexecutar **desde o início**.
 - `GATE-RULE-05` **MUST** — reportar, para cada gate: comando executado, resultado e o
   trecho relevante da saída em caso de falha.
 - `GATE-RULE-06` **MUST NOT** — transcrever saída que não foi realmente produzida.
-- Relatar isso diretamente na conclusão da tarefa (ver `@../rules/RULES.md`, seção 12).
+- Relatar isso diretamente na conclusão da tarefa (ver `@../RULES.md`, seção 12).
 
 ---
 

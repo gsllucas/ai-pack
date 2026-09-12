@@ -4,7 +4,7 @@
 neste projeto. Define **comportamento do agente na sessão**, não tecnologia e não
 critério de validação.]
 
-[Gerar cada regra a partir das respostas do bloco B de `@../ask/questions.md`. Manter os IDs
+[Gerar cada regra a partir das respostas do bloco B de `@./ask/questions.md`. Manter os IDs
 estáveis. Remover seções inteiras quando a resposta correspondente indicar que o tópico
 não se aplica; nunca deixar uma seção com conteúdo vazio ou genérico.]
 
@@ -14,12 +14,12 @@ não se aplica; nunca deixar uma seção com conteúdo vazio ou genérico.]
 
 | Documento                             | Quando ler                                                             |
 | ------------------------------------- | ---------------------------------------------------------------------- |
-| `@../skeletons/architecture.md`       | antes de criar, mover ou remover qualquer módulo, camada ou integração |
-| `@../skeletons/folder-structure.md`   | antes de criar arquivo novo                                            |
-| `@../skeletons/{{stack.id}}.md`       | antes de escrever código naquela stack                                 |
-| `@../guardrails/guardrails.md`        | em toda tarefa de implementação                                        |
-| `@../gates/gates.md`                  | antes de declarar qualquer tarefa concluída                            |
-| `@../memory/memory.json`              | para consultar decisões de configuração já registradas                 |
+| `@./skeletons/architecture.md`        | antes de criar, mover ou remover qualquer módulo, camada ou integração |
+| `@./skeletons/folder-structure.md`    | antes de criar arquivo novo                                            |
+| `@./skeletons/{{stack.id}}.md`        | antes de escrever código naquela stack                                 |
+| `@./guardrails/guardrails.md`         | em toda tarefa de implementação                                        |
+| `@./gates/gates.md`                   | antes de declarar qualquer tarefa concluída                            |
+| `@./memory.json`                      | para consultar decisões de configuração já registradas                 |
 
 [Listar apenas arquivos efetivamente gerados. Remover linhas de superfícies inexistentes.]
 
@@ -79,7 +79,7 @@ Níveis:
 | Refatoração local sem mudar comportamento nem contrato       | `NOTIFICAR` |                            |
 | Escolher entre duas implementações equivalentes              | `NOTIFICAR` | registrar o motivo         |
 | Mudança de arquitetura, camada ou fronteira de módulo        | `CONFIRMAR` |                            |
-| Alteração de contrato público (API, evento, CLI, SDK)        | `CONFIRMAR` | ver `@../guardrails/api.md` |
+| Alteração de contrato público (API, evento, CLI, SDK)        | `CONFIRMAR` | ver `@./guardrails/api.md` |
 | Alteração de schema de banco ou criação de migration         | `CONFIRMAR` |                            |
 | Mudança em autenticação, autorização ou criptografia         | `CONFIRMAR` |                            |
 | Adição, troca ou remoção de dependência                      | `CONFIRMAR` | ver seção 7                |
@@ -203,7 +203,7 @@ no arquivo da stack, não aqui.]
 ## 12. Verificação antes de concluir
 
 - `RULE-VER-01` **MUST** executar {{verification.required}} antes de declarar uma tarefa
-  concluída. Os comandos estão em `@../gates/gates.md`.
+  concluída. Os comandos estão em `@./gates/gates.md`.
 - `RULE-VER-02` **MUST NOT** afirmar que algo “funciona”, “passa” ou “está pronto” sem
   ter executado a verificação e lido a saída.
 - `RULE-VER-03` **MUST** reportar o erro real quando um comando falhar, com a saída
@@ -219,8 +219,8 @@ Ordem de precedência, do mais forte para o mais fraco:
 
 1. Instrução explícita do usuário na conversa atual.
 2. Regras deste arquivo (`RULE-*`).
-3. Guardrails de escopo (`@../guardrails/**`).
-4. Arquitetura e convenções de stack (`@../skeletons/**`).
+3. Guardrails de escopo (`@./guardrails/**`).
+4. Arquitetura e convenções de stack (`@./skeletons/**`).
 5. Padrão observado no código existente.
 6. Preferência geral do agente.
 

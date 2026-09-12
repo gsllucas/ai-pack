@@ -60,7 +60,7 @@ Aplicar na ordem; a primeira condição verdadeira decide:
 5. É execução assíncrona ou agendada? → `workers/`
 6. É função pura, sem estado, já usada em dois lugares? → `utils/`
 7. Nenhuma das anteriores → **parar e perguntar**. Criar diretório novo é decisão de
-   nível `CONFIRMAR` (`@../rules/RULES.md`, seção 3).
+   nível `CONFIRMAR` (`@../RULES.md`, seção 3).
 
 - **MUST NOT** criar arquivo “de apoio” em diretório cuja responsabilidade ele não tem.
 - **MUST NOT** criar `helpers/`, `common/`, `shared/` ou `misc/` como destino de código

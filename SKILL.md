@@ -23,7 +23,7 @@ Conduz uma descoberta guiada por perguntas sobre o projeto e gera `.ai/`: regras
 2. **Inspecionar o repositório** e pré-preencher o que for observável (linguagens, deps, scripts, CI, estrutura, `CLAUDE.md`/`AGENTS.md` existentes). Apresentar como confirmação, nunca como pergunta em branco.
 3. **Entrevistar** seguindo `ask/questions.md`: um bloco por vez, no máximo 4 perguntas por rodada, sempre com opções e uma recomendação justificada.
 4. **Resumir e confirmar** todas as respostas com o usuário.
-5. **Gravar `.ai/memory/memory.json`**, depois gerar na ordem: `rules/RULES.md` → `skeletons/` → `guardrails/` → `gates/`.
+5. **Gravar `.ai/memory.json`**, depois gerar na ordem: `RULES.md` → `skeletons/` → `guardrails/` → `gates/`.
 6. **Validar** com a checklist da seção 8 de `ai-template/README.md` e reportar o resultado.
 
 <critical>NENHUM ARQUIVO DE `.ai/` É ESCRITO ANTES DA CONFIRMAÇÃO DO RESUMO NA ETAPA 4.</critical>
@@ -38,7 +38,7 @@ Conduz uma descoberta guiada por perguntas sobre o projeto e gera `.ai/`: regras
 
 - "O repositório já diz tudo, não preciso perguntar" → inspeção substitui pergunta redundante, não a entrevista.
 - "Vou gerar tudo e o usuário revisa depois" → viola a etapa 4.
-- "Falta a versão/comando, coloco o mais provável" → use `TODO(descoberta)` e registre em `memory/memory.json` (campo `open_questions`).
+- "Falta a versão/comando, coloco o mais provável" → use `TODO(descoberta)` e registre em `memory.json` (campo `open_questions`).
 - "Gero todos os guardrails para o caso de precisar" → superfície não marcada não gera arquivo.
 - "Acrescento boas práticas gerais de LLM" → documento inflado é ignorado; só entra o que veio de resposta ou evidência.
 
@@ -51,8 +51,8 @@ Conduz uma descoberta guiada por perguntas sobre o projeto e gera `.ai/`: regras
 
 ## Verificação antes de concluir
 
-Nenhum `[`, `{{`, `<critical>` ou `TODO(descoberta)` não intencional em `.ai/`; todo `@` resolve; todo ID é único; todo gate tem comando executável; `memory/memory.json` é JSON válido. Reportar os `TODO(descoberta)` remanescentes.
+Nenhum `[`, `{{`, `<critical>` ou `TODO(descoberta)` não intencional em `.ai/`; todo `@` resolve; todo ID é único; todo gate tem comando executável; `memory.json` é JSON válido. Reportar os `TODO(descoberta)` remanescentes.
 
 ## Manutenção
 
-`ai-template/` é um **symlink** para `~/Desktop/ai-pack/ai-template/` (repositório `ai-pack`, remote `speckit-shared-principles`) — fonte canônica dos templates. Editar os arquivos direto no repositório; não há cópia para ressincronizar. Ao evoluir o framework, incrementar `framework.template_version` em `ai-template/memory/memory.json` e commitar no repositório `ai-pack`.
+`ai-template/` é um **symlink** para `~/Desktop/ai-pack/ai-template/` (repositório `ai-pack`, remote `speckit-shared-principles`) — fonte canônica dos templates. Editar os arquivos direto no repositório; não há cópia para ressincronizar. Ao evoluir o framework, incrementar `framework.template_version` em `ai-template/memory.json` e commitar no repositório `ai-pack`.

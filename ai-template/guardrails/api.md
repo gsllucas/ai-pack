@@ -8,7 +8,7 @@ as superfícies estão em `@./guardrails.md` e não devem ser repetidos aqui.]
 
 - `GR-API-01` **MUST NOT** — alterar contrato público existente (rota, método, formato de
   entrada ou saída, código de status, semântica de campo) sem aprovação: é decisão de nível
-  `CONFIRMAR` em `@../rules/RULES.md`, seção 3.
+  `CONFIRMAR` em `@../RULES.md`, seção 3.
 - `GR-API-02` **MUST** — mudança compatível é aditiva: campo novo opcional, endpoint novo.
   Remoção, renomeação, mudança de tipo ou de obrigatoriedade é quebra.
   Processo de quebra neste projeto: {{guardrails.api.breaking_change}}

@@ -19,7 +19,7 @@ diff e dizer se foi violada ou não.
 
 | Documento            | Governa                                              |
 | -------------------- | ---------------------------------------------------- |
-| `@../rules/RULES.md` | o comportamento do agente na sessão                  |
+| `@../RULES.md` | o comportamento do agente na sessão                  |
 | `guardrails/**`      | o artefato que o agente produz                       |
 | `@../gates/gates.md` | como provar objetivamente que o artefato está pronto |
 
@@ -31,7 +31,7 @@ regra de comportamento, ou é descartada.
 1. Antes de implementar, ler este arquivo e o da superfície envolvida.
 2. Ao identificar que a mudança pedida viola um guardrail: **parar antes de escrever o
    código**, explicar qual guardrail e por quê, e propor a alternativa que respeita a regra.
-3. Exceção a guardrail é decisão de nível `CONFIRMAR` (`@../rules/RULES.md`, seção 3): exige
+3. Exceção a guardrail é decisão de nível `CONFIRMAR` (`@../RULES.md`, seção 3): exige
    aprovação explícita e registro do motivo no plano de mudança.
 4. Violação descoberta em código **já existente** é reportada, não corrigida junto de
    outra tarefa (`RULE-SCOPE-02`).

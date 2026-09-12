@@ -22,10 +22,10 @@ de gerar qualquer arquivo de `.ai/`. O protocolo de geração está em `@../READ
    acumuladas; se uma resposta anterior já determina a próxima pergunta, registrar a
    dedução e apenas confirmar.
 6. **Registrar incrementalmente.** Ao fim de cada bloco, gravar as respostas em
-   `memory/memory.json` com a origem (`interview`, `inferred`, `default`).
+   `memory.json` com a origem (`interview`, `inferred`, `default`).
 7. **Não decidir pelo usuário em ponto de impacto.** Escolha de arquitetura, banco,
    política de testes e política de aprovação humana são do usuário; o agente recomenda.
-8. **Não sei / depois** é uma resposta válida: vai para `memory/memory.json` (campo
+8. **Não sei / depois** é uma resposta válida: vai para `memory.json` (campo
    `open_questions`) e vira `TODO(descoberta)` no documento gerado. Nunca preencher com
    suposição.
 9. **Linguagem simples, sem jargão.** Agentes de IA tendem a usar termos técnicos que o
@@ -52,7 +52,7 @@ como confirmação (“detectei X, confirma?”), nunca como pergunta em branco.
 
 <critical>REGRA EXISTENTE NO REPOSITÓRIO TEM PRECEDÊNCIA SOBRE SUGESTÃO DO FRAMEWORK. EM CONFLITO, PERGUNTAR QUAL PREVALECE.</critical>
 
-<critical>AO FINAL DA GERAÇÃO, IDENTIFICAR O ARQUIVO RAIZ DE INSTRUÇÃO DO AGENTE DO PROJETO (CLAUDE.MD, AGENTS.MD, .CURSORRULES OU EQUIVALENTE) E GARANTIR QUE ELE REFERENCIA `.ai/rules/RULES.md` COMO PONTO DE ENTRADA, SEM SOBRESCREVER O CONTEÚDO EXISTENTE. SE NENHUM EXISTIR, PERGUNTAR AO USUÁRIO SE DEVE SER CRIADO UM ARQUIVO MÍNIMO SÓ COM ESSA REFERÊNCIA.</critical>
+<critical>AO FINAL DA GERAÇÃO, IDENTIFICAR O ARQUIVO RAIZ DE INSTRUÇÃO DO AGENTE DO PROJETO (CLAUDE.MD, AGENTS.MD, .CURSORRULES OU EQUIVALENTE) E GARANTIR QUE ELE REFERENCIA `.ai/RULES.md` COMO PONTO DE ENTRADA, SEM SOBRESCREVER O CONTEÚDO EXISTENTE. SE NENHUM EXISTIR, PERGUNTAR AO USUÁRIO SE DEVE SER CRIADO UM ARQUIVO MÍNIMO SÓ COM ESSA REFERÊNCIA.</critical>
 
 <critical>DOCUMENTO DE SPEC, PRD OU TECH-SPEC DE FEATURE (EX.: PASTA `specs/`) NÃO É FONTE DE REGRA, ARQUITETURA OU GUARDRAIL. SPEC TRATA DE FUNCIONALIDADE, EM ESCOPO ISOLADO; ESTE FRAMEWORK GERA PADRÃO DE PROJETO, NÃO REQUISITO DE FEATURE.</critical>
 
@@ -60,7 +60,7 @@ como confirmação (“detectei X, confirma?”), nunca como pergunta em branco.
 
 ## A. Perguntas iniciais e idiomas
 
-Obs.: Serve para criação do arquivo de `.ai/memory/memory.json`.
+Obs.: Serve para criação do arquivo de `.ai/memory.json`.
 
 | ID     | Pergunta                                                                                   | Opções sugeridas                                                      | Recomendado                              | Destino                               |
 | ------ | ------------------------------------------------------------------------------------------ | --------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------- |
@@ -84,7 +84,7 @@ gera pergunta.
 
 ## B. Perguntas sobre regras e princípios gerais
 
-Obs.: Serve para criação do arquivo de `.ai/rules/RULES.md`.
+Obs.: Serve para criação do arquivo de `.ai/RULES.md`.
 
 <critical>PERGUNTAS NECESSÁRIAS PARA CRIAÇÃO DO `RULES.MD`</critical>
 <critical>CADA BULLET LIST É UM TÓPICO QUE DEVE SER CRIADO NO ARQUIVO DE RULES.MD</critical>
@@ -286,7 +286,7 @@ Perguntas adicionais de fechamento:
 1. Apresentar ao usuário um **resumo consolidado** de todas as respostas, agrupado por
    bloco, marcando o que veio de inferência e o que ficou em aberto.
 2. Pedir confirmação explícita. Correções voltam ao bloco de origem.
-3. Gravar `.ai/memory/memory.json`.
+3. Gravar `.ai/memory.json`.
 4. Executar o protocolo de geração descrito em `@../README.md`, seção 5.
 5. Apresentar a checklist de validação (`@../README.md`, seção 8) preenchida, listando
    os `TODO(descoberta)` remanescentes.

@@ -6,7 +6,7 @@ repositório. Camada ou componente não usado pelo projeto é removido, não des
 “não se aplica”.]
 
 [Este arquivo descreve *o sistema*. Regras de comportamento do agente ficam em
-`@../rules/RULES.md`; restrições sobre o código produzido ficam em `@../guardrails/`; onde os
+`@../RULES.md`; restrições sobre o código produzido ficam em `@../guardrails/`; onde os
 arquivos moram fica em `@./folder-structure.md`; como escrever em cada tecnologia fica
 em `@./<stack>.md`.]
 
@@ -141,7 +141,7 @@ nunca estimar.]
 - **Tracing:** [se existe, qual propagação de contexto]
 - **Erros:** [para onde vão; o que caracteriza erro de domínio vs de infraestrutura]
 - Toda operação nova **MUST** ser observável no mesmo padrão das existentes.
-- O que nunca pode ser logado está em `@../rules/RULES.md` (`RULE-SEC-03`).
+- O que nunca pode ser logado está em `@../RULES.md` (`RULE-SEC-03`).
 
 ---
 
@@ -183,4 +183,4 @@ gerais — referenciar por ID.]
 - `MUST NOT` [ex.: lógica de negócio em controller ou em migration]
 
 Violação de invariante exige `CONFIRMAR` e atualização da tabela de decisões (seção 10)
-— ver `@../rules/RULES.md`, seção 3.
+— ver `@../RULES.md`, seção 3.
